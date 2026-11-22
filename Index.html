@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lukman Onire — Statistician and Data Analyst turning data into meaningful insights.">
+  <title>Lukman Onire | Statistician & Data Analyst</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --navy-2: #243b53;
+      --teal: #0f9d9a;
+      --teal-light: #e6f6f5;
+      --ink: #243b53;
+      --muted: #627d98;
+      --line: #d9e2ec;
+      --paper: #ffffff;
+      --soft: #f5f8fa;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1080px, 90%); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 800; color: var(--navy); letter-spacing: -.4px; font-size: 1.15rem; }
+    .brand span { color: var(--teal); }
+    .navlinks { display: flex; gap: 24px; flex-wrap: wrap; font-size: .92rem; color: var(--navy-2); }
+    .navlinks a:hover { color: var(--teal); }
+    .hero { background: linear-gradient(135deg, #f5f8fa 0%, #ffffff 70%); padding: 94px 0 86px; }
+    .eyebrow { color: var(--teal); font-weight: 800; text-transform: uppercase; letter-spacing: 1.7px; font-size: .78rem; }
+    h1 { color: var(--navy); font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.08; letter-spacing: -2px; margin: 14px 0 18px; }
+    .hero p { max-width: 690px; color: var(--muted); font-size: 1.12rem; margin: 0 0 28px; }
+    .actions { display: flex; gap: 13px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 12px 20px; border-radius: 7px; font-weight: 700; font-size: .94rem; }
+    .primary { background: var(--teal); color: white; }
+    .primary:hover { background: #0b8582; }
+    .secondary { border: 1px solid var(--line); color: var(--navy); background: white; }
+    section { padding: 76px 0; }
+    section.soft { background: var(--soft); }
+    h2 { color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; margin: 8px 0 14px; letter-spacing: -.8px; }
+    .lead { max-width: 740px; color: var(--muted); margin: 0 0 30px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--line); background: white; border-radius: 12px; padding: 23px; box-shadow: 0 5px 18px rgba(16,42,67,.035); }
+    .card h3 { color: var(--navy); margin: 0 0 8px; font-size: 1.08rem; }
+    .card p { color: var(--muted); margin: 0; font-size: .95rem; }
+    .tag { display: inline-block; background: var(--teal-light); color: #087b78; border-radius: 30px; padding: 4px 10px; font-size: .76rem; font-weight: 700; margin: 0 5px 7px 0; }
+    .about-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 34px; align-items: start; }
+    .note { border-left: 4px solid var(--teal); padding: 17px 20px; background: var(--teal-light); border-radius: 0 8px 8px 0; color: var(--navy-2); }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill { border: 1px solid var(--line); padding: 9px 13px; border-radius: 7px; background: white; color: var(--navy-2); font-weight: 600; font-size: .9rem; }
+    .project-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .project-number { color: var(--teal); font-weight: 800; font-size: .8rem; }
+    .project-card { display: flex; flex-direction: column; min-height: 230px; }
+    .project-card .tags { margin-top: auto; padding-top: 18px; }
+    .experience { border-left: 2px solid var(--line); padding: 0 0 5px 24px; position: relative; }
+    .experience:before { content: ""; position: absolute; width: 11px; height: 11px; border-radius: 50%; background: var(--teal); left: -6.5px; top: 7px; }
+    .experience h3 { margin: 0; color: var(--navy); }
+    .experience .meta { color: var(--teal); font-weight: 700; font-size: .9rem; margin: 3px 0 9px; }
+    .contact-box { background: var(--navy); color: white; border-radius: 14px; padding: 34px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .contact-box h2 { color: white; margin-top: 0; }
+    .contact-box p { color: #d9e2ec; margin-bottom: 0; }
+    footer { padding: 25px 0; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); }
+    @media (max-width: 760px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 15px 0; }
+      .navlinks { gap: 12px 18px; }
+      .hero { padding: 70px 0 65px; }
+      section { padding: 58px 0; }
+      .grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-box { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">Lukman <span>Onire</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+      <a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="eyebrow">Statistician · Data Analyst · Business Intelligence</div>
+      <h1>Turning data into<br>meaningful insights.</h1>
+      <p>I am Lukman Onire, a Statistics student at the University of Ilorin with an interest in data analytics and business intelligence. I enjoy working with data to uncover patterns, communicate findings and support better decisions.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my projects</a>
+        <a class="btn secondary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="eyebrow">About me</div>
+        <h2>Statistics meets practical problem-solving.</h2>
+        <p class="lead">My background in Statistics shapes how I approach data: with curiosity, structure and attention to evidence. I am developing my ability to move from data collection and preparation to analysis, visualisation and clear communication of insights.</p>
+        <p class="lead">I am particularly interested in using analytics and business intelligence to help organisations understand performance, identify trends and make informed decisions.</p>
+      </div>
+      <div class="note"><strong>My approach</strong><br>Ask the right question. Work carefully with the data. Explain what the results mean. Make the insight useful.</div>
+    </div>
+  </section>
+
+  <section class="soft" id="skills">
+    <div class="wrap">
+      <div class="eyebrow">Capabilities</div>
+      <h2>Skills & tools</h2>
+      <p class="lead">A growing toolkit for statistical analysis, data preparation and visual storytelling.</p>
+      <div class="skill-list">
+        <span class="skill">Microsoft Excel</span><span class="skill">Power BI</span><span class="skill">SQL</span>
+        <span class="skill">R Programming</span><span class="skill">Data Cleaning</span><span class="skill">Data Analysis</span>
+        <span class="skill">Data Visualisation</span><span class="skill">Statistical Analysis</span>
+        <span class="skill">Survey & Questionnaire Design</span><span class="skill">Dashboard Development</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="eyebrow">Selected work</div>
+      <h2>Projects</h2>
+      <p class="lead">A selection of practical projects demonstrating data handling, analysis and visualisation. Add screenshots, datasets and detailed findings to each project card as the case studies are finalised.</p>
+      <div class="grid">
+        <article class="card project-card">
+          <div class="project-top"><span class="project-number">PROJECT 01</span><span class="tag">Excel</span></div>
+          <h3>Sales Performance Dashboard</h3>
+          <p>An interactive dashboard designed to help explore revenue, profit, orders, units sold, product performance and sales trends.</p>
+          <div class="tags"><span class="tag">Data visualisation</span><span class="tag">Business intelligence</span></div>
+        </article>
+        <article class="card project-card">
+          <div class="project-top"><span class="project-number">PROJECT 02</span><span class="tag">Power BI</span></div>
+          <h3>Student Enrolment & Training Dashboard</h3>
+          <p>A dashboard exploring student enrolment and course-related information to make programme data easier to understand.</p>
+          <div class="tags"><span class="tag">Dashboard</span><span class="tag">Reporting</span></div>
+        </article>
+        <article class="card project-card">
+          <div class="project-top"><span class="project-number">PROJECT 03</span><span class="tag">Power BI / Excel</span></div>
+          <h3>Life Expectancy Data Analysis</h3>
+          <p>A data analysis project using life expectancy information to examine patterns and communicate findings through visualisations.</p>
+          <div class="tags"><span class="tag">Statistical thinking</span><span class="tag">Visualisation</span></div>
+        </article>
+        <article class="card project-card">
+          <div class="project-top"><span class="project-number">PROJECT 04</span><span class="tag">Google Forms · Excel</span></div>
+          <h3>Questionnaire-Based Data Collection</h3>
+          <p>A practical workflow involving questionnaire design, collection of responses, data organisation and analysis.</p>
+          <div class="tags"><span class="tag">Data collection</span><span class="tag">Survey analysis</span></div>
+        </article>
+        <article class="card project-card">
+          <div class="project-top"><span class="project-number">PROJECT 05</span><span class="tag">Field experience</span></div>
+          <h3>Market Price Data Collection</h3>
+          <p>Field experience collecting prices and quantity information for selected goods and services as part of market monitoring activities.</p>
+          <div class="tags"><span class="tag">Field data</span><span class="tag">Price monitoring</span></div>
+        </article>
+        <article class="card project-card">
+          <div class="project-top"><span class="project-number">PROJECT 06</span><span class="tag">To be added</span></div>
+          <h3>More analysis coming soon</h3>
+          <p>This space can feature a future SQL, R or statistical modelling project as your portfolio grows.</p>
+          <div class="tags"><span class="tag">Continuous learning</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="experience">
+    <div class="wrap">
+      <div class="eyebrow">Practical experience</div>
+      <h2>Experience</h2>
+      <div class="experience">
+        <h3>National Bureau of Statistics (NBS) — SIWES</h3>
+        <div class="meta">Ilorin, Kwara State · July–October 2026</div>
+        <p class="lead">Participated in field data collection activities, including collecting market prices and quantity information for goods and services. This experience provided practical exposure to real-world data collection and the role of reliable price information in understanding market movements and inflation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="eyebrow">Academic background</div>
+      <h2>Education</h2>
+      <div class="card">
+        <h3>University of Ilorin</h3>
+        <p>B.Sc. Statistics · Undergraduate</p>
+        <p style="margin-top:8px;color:#627d98;font-size:.9rem;">Expected completion year and current level can be added once confirmed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div>
+          <div class="eyebrow" style="color:#6ee7df;">Let's connect</div>
+          <h2>Have a data question or opportunity?</h2>
+          <p>I am open to connecting, collaborating and learning through meaningful data projects.</p>
+        </div>
+        <div class="actions">
+          <!-- Replace the placeholders below with your actual contact details before publishing. -->
+          <a class="btn primary" href="mailto:lukmanonire2@gmail.com">Email me</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/lukman-onire-84a4b7436" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="#contact" target="_blank" rel="noopener">GitHub (coming soon)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Lukman Onire. Built to showcase learning, projects and practical experience.</div></footer>
+</body>
+</html>
